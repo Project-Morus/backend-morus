@@ -1,31 +1,21 @@
-﻿using Domain.Interfaces;
+﻿using Domain.Entities;
+using Domain.Interfaces;
 using Domain.Interfaces.InterfaceServices;
-using Entities.Entities;
-using Entities.Entities.Enum;
-using Microsoft.AspNetCore.DataProtection.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain.Services
 {
     public class UsuarioService : IUsuarioService
     {
-        private readonly IUsuario _Usuario;
-        
+        private readonly IUsuario usuarioGenerico;
 
-        public UsuarioService(IUsuario IUsuario)
+        public UsuarioService(IUsuario usuarioGenerico)
         {
-            _Usuario = IUsuario;
+            this.usuarioGenerico = usuarioGenerico;
         }
 
-        public void CreateUsuario(Usuario usuario)
+        public async Task SalvarUsuario(Usuario usuario)
         {
-            _Usuario.Add(usuario);
+            await usuarioGenerico.Add(usuario);
         }
-
-
     }
 }

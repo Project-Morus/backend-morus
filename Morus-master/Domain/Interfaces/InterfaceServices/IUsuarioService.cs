@@ -1,15 +1,9 @@
-﻿using Entities.Entities;
-using Entities.Entities.Enum;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Domain.Entities;
 
 namespace Domain.Interfaces.InterfaceServices
 {
     public interface IUsuarioService
     {
-        void CreateUsuario(Usuario usuario);
+        Task SalvarUsuario(Usuario usuario);
     }
 }
