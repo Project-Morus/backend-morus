@@ -1,6 +1,8 @@
 import 'dotenv/config'
 import fastify from 'fastify'
-import { env } from '../../env'
+
+import { env } from '@/env'
+
 
 export const app = fastify({ logger: true })
 
