@@ -2,6 +2,7 @@ import 'dotenv'
 import z from 'zod'
 
 const envSchema = z.object({
+  NODE_ENV: z.enum(['development', 'production']).default('development'),
   SERVER_TYPE: z.enum(['fastify']).default('fastify'),
   PORT_SERVER: z.coerce.number().default(3333),
 })
