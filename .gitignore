@@ -1,0 +1,15 @@
+# Dependencies
+node_modules
+pnpm-lock
+yarn.lock
+npm.lock
+
+# Build
+build
+
+# Tests
+coverage
+
+#Environment
+.env
+.env.example
